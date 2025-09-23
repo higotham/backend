@@ -21,3 +21,9 @@ app.mount("/images", StaticFiles(directory=static_dir), name="images")
 routes = [root.route, story_board.route, generate.route, gallery.route, canvas.route]
 for route in routes:
   app.include_router(route)
+
+# Day3 routers
+from controller.gallery import route as gallery_route
+app.include_router(gallery_route)
+from controller.generate import route as generate_route
+app.include_router(generate_route)
