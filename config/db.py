@@ -6,7 +6,7 @@ conn_params = {
   "user" : os.getenv('MARIADB_USER'),
   "password" : os.getenv('MARIADB_PASSWORD'),
   "host" : os.getenv('MARIADB_HOST'),
-  "database" : os.getenv('MARIADB_DATABASE', 'gotham'),
+  "database" : "auth",
   "port" : int(os.getenv('MARIADB_PORT'))
 }
 
